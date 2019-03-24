@@ -21,6 +21,8 @@ namespace Xamarin.Forms.Controls.Issues
 	[Issue (IssueTracker.Bugzilla, 42329, "ListView in Frame and FormsAppCompatActivity Memory Leak")]
 	public class Bugzilla42329 : TestMasterDetailPage 
 	{
+		private static bool _wasDestructed = false;
+
 		const string DestructorMessage = "ContentPageEx Destructor called";
 		const string Page1Title = "Page1";
 		const string Page2Title = "Page2";
@@ -102,6 +104,7 @@ namespace Xamarin.Forms.Controls.Issues
 		{
 			~ContentPageEx()
 			{
+				_wasDestructed = true;
 				Log.Warning("Bugzilla42329", DestructorMessage);
 			}
 		}
@@ -150,5 +153,28 @@ namespace Xamarin.Forms.Controls.Issues
 				GC.Collect();
 			}
 		}
+
+#if UITEST
+		[Test]
+		public void Bugzilla42329Test()
+		{
+			RunningApp.WaitForElement(Page1Title);
+
+			OpenMenu();
+			RunningApp.Tap(Page2Title);
+			RunningApp.WaitForElement(Page2Title);
+
+			OpenMenu();
+			RunningApp.Tap(Page3Title);
+			RunningApp.WaitForElement(Page3Title);
+
+			Assert.IsTrue(_wasDestructed);
+		}
+
+		private void OpenMenu()
+		{
+			RunningApp.TapCoordinates(150, 90);
+		}
+#endif
 	}
 }
