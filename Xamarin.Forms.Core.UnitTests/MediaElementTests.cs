@@ -32,7 +32,8 @@ namespace Xamarin.Forms.Core.UnitTests
 			Assert.IsNull(mediaElement.Source);
 
 			bool signaled = false;
-			mediaElement.PropertyChanged += (sender, e) => {
+			mediaElement.PropertyChanged += (sender, e) =>
+			{
 				if (e.PropertyName == "Source")
 					signaled = true;
 			};
@@ -50,7 +51,8 @@ namespace Xamarin.Forms.Core.UnitTests
 			var mediaElement = new MediaElement { Source = MediaSource.FromFile("Video.mp4") };
 
 			bool signaled = false;
-			mediaElement.PropertyChanged += (sender, e) => {
+			mediaElement.PropertyChanged += (sender, e) =>
+			{
 				if (e.PropertyName == "Source")
 					signaled = true;
 			};
@@ -66,7 +68,8 @@ namespace Xamarin.Forms.Core.UnitTests
 			var source = (FileMediaSource)MediaSource.FromFile("Video.mp4");
 
 			bool signaled = false;
-			source.SourceChanged += (sender, e) => {
+			source.SourceChanged += (sender, e) =>
+			{
 				signaled = true;
 			};
 

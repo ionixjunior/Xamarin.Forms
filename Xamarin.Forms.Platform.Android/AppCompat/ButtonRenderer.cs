@@ -199,7 +199,7 @@ namespace Xamarin.Forms.Platform.Android.AppCompat
 			{
 				NativeButton.LetterSpacing = Element.CharacterSpacing.ToEm();
 			}
-			
+
 		}
 
 		void IOnClickListener.OnClick(AView v) => ButtonElementManager.OnClick(Element, Element, v);

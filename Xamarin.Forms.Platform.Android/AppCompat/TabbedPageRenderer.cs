@@ -905,7 +905,7 @@ namespace Xamarin.Forms.Platform.Android.AppCompat
 					menuItem.SetChecked(true);
 			}
 
-			if(sender is BottomSheetDialog bsd)
+			if (sender is BottomSheetDialog bsd)
 				bsd.DismissEvent -= OnMoreSheetDismissed;
 		}
 

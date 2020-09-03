@@ -104,9 +104,9 @@ namespace Xamarin.Forms.Platform.Android.FastRenderers
 				Control.Hint = string.Empty;
 			}
 
-			var result  = _buttonLayoutManager.GetDesiredSize(widthConstraint, heightConstraint);
+			var result = _buttonLayoutManager.GetDesiredSize(widthConstraint, heightConstraint);
 
-			if(setHint)
+			if (setHint)
 				Control.Hint = hint;
 
 			return result;
@@ -250,9 +250,9 @@ namespace Xamarin.Forms.Platform.Android.FastRenderers
 			if (this.IsDisposed())
 			{
 				return;
-			}	
+			}
 
-			if(Control?.LayoutParameters == null && _hasLayoutOccurred)
+			if (Control?.LayoutParameters == null && _hasLayoutOccurred)
 			{
 				ElementPropertyChanged?.Invoke(this, e);
 				return;

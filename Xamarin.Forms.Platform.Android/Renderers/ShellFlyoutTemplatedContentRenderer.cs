@@ -150,7 +150,7 @@ namespace Xamarin.Forms.Platform.Android
 
 		void UpdateFlyoutHeader()
 		{
-			if(_headerView != null)
+			if (_headerView != null)
 			{
 				var oldHeaderView = _headerView;
 				_headerView = null;
@@ -200,7 +200,7 @@ namespace Xamarin.Forms.Platform.Android
 			}
 			else
 				_rootView.UpdateBackground(brush);
-			
+
 			UpdateFlyoutBgImageAsync();
 		}
 

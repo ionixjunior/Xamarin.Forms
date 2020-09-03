@@ -252,7 +252,7 @@ namespace Xamarin.Forms.Platform.Android
 			}
 			else
 			{
-				if(backdrop is SolidColorBrush solidColor)
+				if (backdrop is SolidColorBrush solidColor)
 				{
 					_scrimPaint = null;
 					var backdropColor = solidColor.Color;

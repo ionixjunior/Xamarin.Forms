@@ -93,7 +93,7 @@ namespace Xamarin.Forms.Platform.Android
 					_adapter.Dispose();
 					_adapter = null;
 				}
- 			} 
+			}
 
 
 			base.Dispose(disposing);

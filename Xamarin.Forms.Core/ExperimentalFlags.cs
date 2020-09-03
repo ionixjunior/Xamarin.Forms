@@ -29,7 +29,7 @@ namespace Xamarin.Forms
 		{
 			if (DesignMode.IsDesignModeEnabled)
 			{
-				return; 
+				return;
 			}
 
 			if (Device.Flags == null || !Device.Flags.Contains(flagName))

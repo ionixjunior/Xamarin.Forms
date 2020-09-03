@@ -217,7 +217,7 @@ namespace Xamarin.Forms.Platform.Android
 			{
 				await Page.Navigation.PopAsync();
 			}
-			catch(Exception exc)
+			catch (Exception exc)
 			{
 				Internals.Log.Warning(nameof(Shell), $"Failed to Navigate Back: {exc}");
 			}
@@ -283,7 +283,7 @@ namespace Xamarin.Forms.Platform.Android
 
 		void OnBackButtonBehaviorChanged(object sender, PropertyChangedEventArgs e)
 		{
-			if(!e.Is(BackButtonBehavior.CommandParameterProperty))
+			if (!e.Is(BackButtonBehavior.CommandParameterProperty))
 				UpdateLeftBarButtonItem();
 		}
 
@@ -408,7 +408,7 @@ namespace Xamarin.Forms.Platform.Android
 				defaultDrawerArrowDrawable = true;
 			}
 
-			if(icon != null)
+			if (icon != null)
 				icon.Progress = (CanNavigateBack) ? 1 : 0;
 
 			if (command != null || CanNavigateBack)
@@ -416,7 +416,7 @@ namespace Xamarin.Forms.Platform.Android
 				_drawerToggle.DrawerIndicatorEnabled = false;
 				toolbar.NavigationIcon = icon;
 			}
-			else if(_flyoutBehavior == FlyoutBehavior.Flyout || !defaultDrawerArrowDrawable)
+			else if (_flyoutBehavior == FlyoutBehavior.Flyout || !defaultDrawerArrowDrawable)
 			{
 				bool drawerEnabled = isEnabled && icon != null;
 				_drawerToggle.DrawerIndicatorEnabled = drawerEnabled;
@@ -684,7 +684,7 @@ namespace Xamarin.Forms.Platform.Android
 				TintColor = defaultColor;
 				_defaultSize = Forms.GetFontSizeNormal(context);
 				IconBitmap = icon;
-				Text = text;		
+				Text = text;
 			}
 
 			public override void Draw(Canvas canvas)

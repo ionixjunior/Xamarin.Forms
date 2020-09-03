@@ -41,7 +41,7 @@ namespace Xamarin.Forms.Platform.Android
 
 			// Create a new snap helper
 			_snapHelper = CreateSnapHelper(snapPointsType, alignment);
-			
+
 			// And attach it to this RecyclerView
 			_snapHelper.AttachToRecyclerView(_recyclerView);
 		}

@@ -38,7 +38,7 @@ namespace Xamarin.Forms.Platform.Android
 		VisualElementRenderer _visualElementRenderer;
 		BorderBackgroundManager _backgroundTracker;
 		IPlatformElementConfiguration<PlatformConfiguration.Android, ImageButton> _platformElementConfiguration;
-		ImageButton _imageButton;		
+		ImageButton _imageButton;
 
 		public event EventHandler<VisualElementChangedEventArgs> ElementChanged;
 		public event EventHandler<PropertyChangedEventArgs> ElementPropertyChanged;
@@ -202,7 +202,7 @@ namespace Xamarin.Forms.Platform.Android
 		{
 			ElementChanged?.Invoke(this, new VisualElementChangedEventArgs(e.OldElement, e.NewElement));
 		}
-		
+
 		public override void Draw(Canvas canvas)
 		{
 			if (Element == null)
@@ -219,7 +219,7 @@ namespace Xamarin.Forms.Platform.Android
 					var height = (float)canvas.Height;
 					var widthRatio = 1f;
 					var heightRatio = 1f;
-						
+
 					if (Element.Aspect == Aspect.AspectFill && OnThisPlatform().GetIsShadowEnabled())
 						Internals.Log.Warning(nameof(ImageButtonRenderer), "AspectFill isn't fully supported when using shadows. Image may be clipped incorrectly to Border");
 

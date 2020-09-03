@@ -81,7 +81,7 @@ namespace Xamarin.Forms
 		{
 			get { return (double)GetValue(BufferingProgressProperty); }
 		}
-		
+
 		public bool CanSeek
 		{
 			get { return Source != null && Duration.HasValue; }
@@ -102,7 +102,7 @@ namespace Xamarin.Forms
 			get { return (bool)GetValue(IsLoopingProperty); }
 			set { SetValue(IsLoopingProperty, value); }
 		}
-		
+
 		public bool KeepScreenOn
 		{
 			get { return (bool)GetValue(KeepScreenOnProperty); }
@@ -186,14 +186,16 @@ namespace Xamarin.Forms
 		{
 			StateRequested?.Invoke(this, new StateRequested(MediaElementState.Stopped));
 		}
-		
+
 		double IMediaElementController.BufferingProgress { get => (double)GetValue(BufferingProgressProperty); set => SetValue(BufferingProgressProperty, value); }
 		MediaElementState IMediaElementController.CurrentState { get => (MediaElementState)GetValue(CurrentStateProperty); set => SetValue(CurrentStateProperty, value); }
 		TimeSpan? IMediaElementController.Duration { get => (TimeSpan?)GetValue(DurationProperty); set => SetValue(DurationProperty, value); }
 		TimeSpan IMediaElementController.Position { get => (TimeSpan)GetValue(PositionProperty); set => SetValue(PositionProperty, value); }
 		int IMediaElementController.VideoHeight { get => (int)GetValue(VideoHeightProperty); set => SetValue(VideoHeightProperty, value); }
 		int IMediaElementController.VideoWidth { get => (int)GetValue(VideoWidthProperty); set => SetValue(VideoWidthProperty, value); }
-		double IMediaElementController.Volume { get => (double)GetValue(VolumeProperty); set => SetValue(VolumeProperty, value);
+		double IMediaElementController.Volume
+		{
+			get => (double)GetValue(VolumeProperty); set => SetValue(VolumeProperty, value);
 		}
 		void IMediaElementController.OnMediaEnded()
 		{
@@ -214,14 +216,14 @@ namespace Xamarin.Forms
 		{
 			MediaOpened?.Invoke(this, EventArgs.Empty);
 		}
-		
+
 		public event EventHandler MediaOpened;
 
 		void IMediaElementController.OnSeekCompleted()
 		{
 			SeekCompleted?.Invoke(this, EventArgs.Empty);
 		}
-		
+
 		public event EventHandler SeekCompleted;
 
 		protected override void OnBindingContextChanged()
@@ -304,6 +306,6 @@ namespace Xamarin.Forms
 		void OnMediaFailed();
 		void OnMediaOpened();
 		void OnSeekCompleted();
-		
+
 	}
 }

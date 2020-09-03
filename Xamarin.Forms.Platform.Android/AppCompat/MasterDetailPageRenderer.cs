@@ -132,7 +132,7 @@ namespace Xamarin.Forms.Platform.Android.AppCompat
 				oldElement.Disappearing -= MasterDetailPageDisappearing;
 
 				RemoveDrawerListener(this);
-			
+
 				if (_detailLayout != null)
 				{
 					RemoveView(_detailLayout);

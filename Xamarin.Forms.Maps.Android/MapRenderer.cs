@@ -544,20 +544,20 @@ namespace Xamarin.Forms.Maps.Android
 			switch (sender)
 			{
 				case Polyline polyline:
-				{
-					PolylineOnPropertyChanged(polyline, e);
-					break;
-				}
+					{
+						PolylineOnPropertyChanged(polyline, e);
+						break;
+					}
 				case Polygon polygon:
-				{
-					PolygonOnPropertyChanged(polygon, e);
-					break;
-				}
+					{
+						PolygonOnPropertyChanged(polygon, e);
+						break;
+					}
 				case Circle circle:
-				{
-					CircleOnPropertyChanged(circle, e);
-					break;
-				}
+					{
+						CircleOnPropertyChanged(circle, e);
+						break;
+					}
 			}
 		}
 
@@ -590,7 +590,7 @@ namespace Xamarin.Forms.Maps.Android
 				case NotifyCollectionChangedAction.Reset:
 					if (_polylines != null)
 					{
-						for(int i = 0; i < _polylines.Count; i++)
+						for (int i = 0; i < _polylines.Count; i++)
 							_polylines[i].Remove();
 
 						_polylines = null;
@@ -974,7 +974,7 @@ namespace Xamarin.Forms.Maps.Android
 			{
 				nativeCircle.StrokeColor = formsCircle.StrokeColor.ToAndroid();
 			}
-			else if(e.PropertyName == MapElement.StrokeWidthProperty.PropertyName)
+			else if (e.PropertyName == MapElement.StrokeWidthProperty.PropertyName)
 			{
 				nativeCircle.StrokeWidth = formsCircle.StrokeWidth;
 			}

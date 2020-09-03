@@ -79,7 +79,7 @@
 		}
 
 		void UpdateBackground(Brush background)
-		{ 
+		{
 			Button.Background = background;
 			BoxView.Background = background;
 			CornerRadiusBoxView.Background = background;

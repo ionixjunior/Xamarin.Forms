@@ -28,7 +28,7 @@ namespace Xamarin.Forms.Material.Android
 		VisualElementTracker _visualElementTracker;
 		VisualElementRenderer _visualElementRenderer;
 		MotionEventHelper _motionEventHelper;
-		
+
 		public MaterialProgressBarRenderer(Context context)
 			: base(MaterialContextThemeWrapper.Create(context), null, Resource.Attribute.materialProgressBarHorizontalStyle)
 		{

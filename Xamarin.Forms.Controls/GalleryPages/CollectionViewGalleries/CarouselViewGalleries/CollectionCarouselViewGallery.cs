@@ -7,7 +7,7 @@ using Xamarin.Forms.Internals;
 
 namespace Xamarin.Forms.Controls.GalleryPages.CollectionViewGalleries.CarouselViewGalleries
 {
- 	[Preserve(AllMembers = true)]
+	[Preserve(AllMembers = true)]
 	public class CollectionCarouselViewGallery : ContentPage
 	{
 		public CollectionCarouselViewGallery()
@@ -15,7 +15,7 @@ namespace Xamarin.Forms.Controls.GalleryPages.CollectionViewGalleries.CarouselVi
 			Title = "Working with ObservableCollections and CarouselView";
 
 			BindingContext = new CollectionCarouselViewGalleryViewModel();
-   
+
 			var layout = new Grid
 			{
 				RowDefinitions = new RowDefinitionCollection
@@ -86,7 +86,7 @@ namespace Xamarin.Forms.Controls.GalleryPages.CollectionViewGalleries.CarouselVi
 			layout.Children.Add(carouselView, 0, 0);
 			layout.Children.Add(scroll, 0, 1);
 
-   			Content = layout;
+			Content = layout;
 		}
 
 		internal DataTemplate GetCarouselTemplate()
@@ -139,7 +139,7 @@ namespace Xamarin.Forms.Controls.GalleryPages.CollectionViewGalleries.CarouselVi
 				OnPropertyChanged();
 			}
 		}
-  
+
 		public ICommand ClearCommand => new Command(Clear);
 		public ICommand NewObservableCommand => new Command(NewObservable);
 		public ICommand NewItemsObservableCommand => new Command(NewItemsObservable);
@@ -149,7 +149,7 @@ namespace Xamarin.Forms.Controls.GalleryPages.CollectionViewGalleries.CarouselVi
 		{
 			Items?.Clear();
 		}
-		  
+
 		void NewObservable()
 		{
 			Clear();
@@ -167,7 +167,7 @@ namespace Xamarin.Forms.Controls.GalleryPages.CollectionViewGalleries.CarouselVi
 
 			Items = new ObservableCollection<CarouselData>(items);
 		}
-  
+
 		void NewItemsObservable()
 		{
 			Clear();
@@ -190,19 +190,19 @@ namespace Xamarin.Forms.Controls.GalleryPages.CollectionViewGalleries.CarouselVi
 
 			await Task.Delay(500);
 
-   			Device.BeginInvokeOnMainThread(() =>
-			{
-				Items = new ObservableCollection<CarouselData>();
+			Device.BeginInvokeOnMainThread(() =>
+		 {
+			 Items = new ObservableCollection<CarouselData>();
 
-				for (int n = 0; n < 5; n++)
-				{
-					Items.Add(new CarouselData
-					{
-						Color = Color.FromRgb(_random.Next(0, 255), _random.Next(0, 255), _random.Next(0, 255)),
-						Name = $"Thead {n + 1}"
-					});
-				}
-			});
+			 for (int n = 0; n < 5; n++)
+			 {
+				 Items.Add(new CarouselData
+				 {
+					 Color = Color.FromRgb(_random.Next(0, 255), _random.Next(0, 255), _random.Next(0, 255)),
+					 Name = $"Thead {n + 1}"
+				 });
+			 }
+		 });
 		}
 	}
 }

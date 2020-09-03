@@ -33,7 +33,7 @@ namespace Xamarin.Forms.Platform.Android
 
 		void ViewPager.IOnPageChangeListener.OnPageScrolled(int position, float positionOffset, int positionOffsetPixels)
 		{
-			if(!_selecting && ShellSection?.CurrentItem != null)
+			if (!_selecting && ShellSection?.CurrentItem != null)
 			{
 				UpdateCurrentItem(ShellSection.CurrentItem);
 			}
@@ -63,7 +63,7 @@ namespace Xamarin.Forms.Platform.Android
 			{
 				UpdateCurrentItem(shellContent);
 			}
-			else if(shellSection?.CurrentItem != null)
+			else if (shellSection?.CurrentItem != null)
 			{
 				var currentPosition = SectionController.GetItems().IndexOf(shellSection.CurrentItem);
 				_selecting = true;
@@ -177,7 +177,7 @@ namespace Xamarin.Forms.Platform.Android
 				currentPage = ((IShellContentController)shellSection.CurrentItem).GetOrCreateContent();
 
 				// current item hasn't changed
-				if(currentItem == shellSection.CurrentItem)
+				if (currentItem == shellSection.CurrentItem)
 					currentIndex = SectionController.GetItems().IndexOf(currentItem);
 			}
 
@@ -214,7 +214,7 @@ namespace Xamarin.Forms.Platform.Android
 
 				var tab = _tablayout.GetTabAt(i);
 
-				if(tab.View != null)
+				if (tab.View != null)
 					FastRenderers.AutomationPropertiesProvider.AccessibilitySettingsChanged(tab.View, items[i]);
 			}
 		}

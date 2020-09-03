@@ -50,11 +50,11 @@ namespace Xamarin.Forms.Platform.Android.AppCompat
 		public override int GetItemPosition(Object objectValue)
 		{
 			var fragContainer = objectValue as FragmentContainer;
-			
+
 			if (fragContainer?.Page != null)
 			{
 				int index = _page.Children.IndexOf(fragContainer.Page);
-				
+
 				if (index >= 0)
 					return index;
 			}
@@ -90,7 +90,7 @@ namespace Xamarin.Forms.Platform.Android.AppCompat
 				if (!_fragmentManager.IsDestroyed)
 				{
 					FragmentTransaction transaction = _fragmentManager.BeginTransactionEx();
-			
+
 					foreach (Fragment fragment in _fragments)
 					{
 						transaction.RemoveEx(fragment);

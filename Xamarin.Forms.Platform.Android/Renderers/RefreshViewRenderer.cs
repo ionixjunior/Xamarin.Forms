@@ -191,7 +191,7 @@ namespace Xamarin.Forms.Platform.Android
 				return true;
 			}
 
-			if(view is RecyclerView recyclerView)
+			if (view is RecyclerView recyclerView)
 				return recyclerView.ComputeVerticalScrollOffset() > 0;
 
 			if (view is NestedScrollView nestedScrollView)

@@ -225,7 +225,7 @@ namespace Xamarin.Forms.Platform.Android
 			linearLayout.AddView(_textBlock);
 			linearLayout.AddView(_clearButton);
 			linearLayout.AddView(_clearPlaceholderButton);
-		
+
 			UpdateClearButtonState();
 
 			// hook all events down here to avoid getting events while doing setup
@@ -235,7 +235,7 @@ namespace Xamarin.Forms.Platform.Android
 			_clearButton.Click += OnClearButtonClicked;
 			_clearPlaceholderButton.Click += OnClearPlaceholderButtonClicked;
 			_searchButton.Click += OnSearchButtonClicked;
-			
+
 			AddView(_cardView);
 
 			linearLayout.Dispose();

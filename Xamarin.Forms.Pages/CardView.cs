@@ -34,4 +34,3 @@ namespace Xamarin.Forms.Pages
 		}
 	}
 }
-

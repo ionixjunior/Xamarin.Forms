@@ -1,6 +1,6 @@
 using System;
-using IEntry = Xamarin.Forms.Platform.Tizen.Native.IEntry;
 using EEntry = ElmSharp.Entry;
+using IEntry = Xamarin.Forms.Platform.Tizen.Native.IEntry;
 using Specific = Xamarin.Forms.PlatformConfiguration.TizenSpecific.Entry;
 
 namespace Xamarin.Forms.Platform.Tizen
@@ -46,7 +46,7 @@ namespace Xamarin.Forms.Platform.Tizen
 				entry.PrependMarkUpFilter(MaxLengthFilter);
 				SetNativeControl(entry);
 
-				
+
 			}
 			base.OnElementChanged(e);
 		}
@@ -154,7 +154,7 @@ namespace Xamarin.Forms.Platform.Tizen
 			if (Control is IEntry ie)
 			{
 				ie.FontAttributes = Element.FontAttributes;
-			}			
+			}
 		}
 
 		void UpdateHorizontalTextAlignment()
@@ -162,7 +162,7 @@ namespace Xamarin.Forms.Platform.Tizen
 			if (Control is IEntry ie)
 			{
 				ie.HorizontalTextAlignment = Element.HorizontalTextAlignment.ToNative();
-			}			
+			}
 		}
 
 		void UpdateKeyboard(bool initialize)

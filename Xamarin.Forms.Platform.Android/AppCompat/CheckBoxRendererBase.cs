@@ -240,7 +240,7 @@ namespace Xamarin.Forms.Platform.Android
 
 			var mode = PorterDuff.Mode.SrcIn;
 
-			
+
 			CompoundButtonCompat.SetButtonTintList(Control, GetColorStateList());
 			CompoundButtonCompat.SetButtonTintMode(Control, mode);
 		}

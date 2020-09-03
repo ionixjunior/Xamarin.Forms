@@ -15,7 +15,7 @@ using Android.Support.V4.View;
 
 namespace Xamarin.Forms.Platform.Android.AppCompat
 {
-	
+
 	public class CarouselPageRenderer : VisualElementRenderer<CarouselPage>, ViewPager.IOnPageChangeListener, IManageFragments
 	{
 		bool _disposed;

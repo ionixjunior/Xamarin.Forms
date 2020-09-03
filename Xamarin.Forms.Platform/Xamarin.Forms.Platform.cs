@@ -140,17 +140,17 @@
 	}
 
 	internal class _MediaElementRenderer
-  {
-	}
-   
-  internal class _SwipeViewRenderer
 	{
 	}
 
-	internal class _PathRenderer	
+	internal class _SwipeViewRenderer
 	{
 	}
-	
+
+	internal class _PathRenderer
+	{
+	}
+
 	internal class _EllipseRenderer
 	{
 	}

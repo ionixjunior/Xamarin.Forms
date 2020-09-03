@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Globalization;
 using Xamarin.Forms.PlatformConfiguration.TizenSpecific;
-
+using PlayerState = Xamarin.Forms.PlatformConfiguration.TizenSpecific.PlaybackState;
 using XLabel = Xamarin.Forms.Label;
 using XTextAlignment = Xamarin.Forms.TextAlignment;
-using PlayerState = Xamarin.Forms.PlatformConfiguration.TizenSpecific.PlaybackState;
 
 namespace Xamarin.Forms.Platform.Tizen.Native
 {
@@ -74,7 +73,7 @@ namespace Xamarin.Forms.Platform.Tizen.Native
 				Converter = new MillisecondToTextConverter()
 			});
 			AbsoluteLayout.SetLayoutFlags(posLabel, AbsoluteLayoutFlags.All);
-			AbsoluteLayout.SetLayoutBounds(posLabel, new Rectangle(0,0,1,1));
+			AbsoluteLayout.SetLayoutBounds(posLabel, new Rectangle(0, 0, 1, 1));
 
 			var durationLabel = new XLabel
 			{
@@ -125,7 +124,7 @@ namespace Xamarin.Forms.Platform.Tizen.Native
 			{
 				HorizontalOptions = LayoutOptions.FillAndExpand,
 				VerticalOptions = LayoutOptions.FillAndExpand,
-				Children = { 
+				Children = {
 					progressLayout,
 					PlayImage,
 					PauseImage,
