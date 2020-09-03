@@ -36,8 +36,10 @@ namespace Xamarin.Forms.Platform.Android
 		static Type _styleClass;
 		static Type _layoutClass;
 
-		public static Type DrawableClass { 
-			get { 
+		public static Type DrawableClass
+		{
+			get
+			{
 				if (_drawableClass == null)
 					_drawableClass = FindType("Drawable", "Resource_Drawable");
 				return _drawableClass;
@@ -48,8 +50,10 @@ namespace Xamarin.Forms.Platform.Android
 			}
 		}
 
-		public static Type ResourceClass { 
-			get { 
+		public static Type ResourceClass
+		{
+			get
+			{
 				if (_resourceClass == null)
 					_resourceClass = FindType("Id", "Resource_Id");
 				return _resourceClass;
@@ -60,8 +64,10 @@ namespace Xamarin.Forms.Platform.Android
 			}
 		}
 
-		public static Type StyleClass { 
-			get { 
+		public static Type StyleClass
+		{
+			get
+			{
 				if (_styleClass == null)
 					_styleClass = FindType("Style", "Resource_Style");
 				return _styleClass;
@@ -72,8 +78,10 @@ namespace Xamarin.Forms.Platform.Android
 			}
 		}
 
-		public static Type LayoutClass { 
-			get { 
+		public static Type LayoutClass
+		{
+			get
+			{
 				if (_layoutClass == null)
 					_layoutClass = FindType("Layout", "Resource_Layout");
 				return _layoutClass;

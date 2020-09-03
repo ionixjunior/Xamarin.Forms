@@ -57,7 +57,7 @@ namespace Xamarin.Forms.Platform.Android
 			_recyclerView.AddOnScrollListener(_initialScrollListener);
 		}
 
-		void StopListeningForScroll() 
+		void StopListeningForScroll()
 		{
 			if (_recyclerView != null && _initialScrollListener != null)
 			{

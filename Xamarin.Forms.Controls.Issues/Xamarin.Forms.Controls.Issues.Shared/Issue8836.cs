@@ -11,7 +11,7 @@ namespace Xamarin.Forms.Controls.Issues
 		{
 			var stack = new StackLayout();
 
-			stack.Children.Add(new Label {Text = "Click the button to toggle the clear button visibility."});
+			stack.Children.Add(new Label { Text = "Click the button to toggle the clear button visibility." });
 
 			Entry = new Entry
 			{

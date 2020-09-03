@@ -72,18 +72,18 @@ namespace Xamarin.Forms.Material.Android
 			if (_disposed)
 				return;
 
-			if(!_isSetup)
+			if (!_isSetup)
 			{
 				_isSetup = true;
 				EditText.FocusChange += OnFocusChange;
 				ResetTextColors(formsTextColor, formsPlaceHolderColor);
 			}
-			else if(formsTextColor != _formsTextColor || _formsPlaceholderColor != formsPlaceHolderColor)
+			else if (formsTextColor != _formsTextColor || _formsPlaceholderColor != formsPlaceHolderColor)
 			{
 				ResetTextColors(formsTextColor, formsPlaceHolderColor);
 			}
 
-			if(HasFocus)
+			if (HasFocus)
 				ViewCompat.SetBackgroundTintList(EditText, _focusedUnderlineColorsList);
 			else
 				ViewCompat.SetBackgroundTintList(EditText, _unfocusedUnderlineColorsList);

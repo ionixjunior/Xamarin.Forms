@@ -65,7 +65,7 @@ namespace Xamarin.Forms.Platform.WPF
 				Controller.Position = Control.Position;
 			}
 		}
-		
+
 		void ElementStateRequested(object sender, StateRequested e)
 		{
 			_requestedState = e.State;
@@ -175,7 +175,8 @@ namespace Xamarin.Forms.Platform.WPF
 			}
 			else
 			{
-				Controller.CurrentState = _requestedState; ;
+				Controller.CurrentState = _requestedState;
+				;
 			}
 		}
 

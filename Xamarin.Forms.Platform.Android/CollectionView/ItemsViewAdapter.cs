@@ -12,7 +12,7 @@ using ViewGroup = Android.Views.ViewGroup;
 
 namespace Xamarin.Forms.Platform.Android
 {
-	public class ItemsViewAdapter<TItemsView, TItemsViewSource> : RecyclerView.Adapter 
+	public class ItemsViewAdapter<TItemsView, TItemsViewSource> : RecyclerView.Adapter
 		where TItemsView : ItemsView
 		where TItemsViewSource : IItemsViewSource
 	{
@@ -103,7 +103,7 @@ namespace Xamarin.Forms.Platform.Android
 			{
 				return ItemViewType.TemplatedItem;
 			}
-		
+
 			// No template, just use the Text view
 			return ItemViewType.TextItem;
 		}

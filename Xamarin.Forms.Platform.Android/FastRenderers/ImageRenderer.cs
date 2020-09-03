@@ -190,7 +190,7 @@ namespace Xamarin.Forms.Platform.Android.FastRenderers
 		void IImageRendererController.SkipInvalidate() => _skipInvalidate = true;
 		void IImageRendererController.SetFormsAnimationDrawable(IFormsAnimationDrawable value)
 		{
-			if(_formsAnimationDrawable != null)
+			if (_formsAnimationDrawable != null)
 				_formsAnimationDrawable.AnimationStopped -= OnAnimationStopped;
 
 			_formsAnimationDrawable = value;

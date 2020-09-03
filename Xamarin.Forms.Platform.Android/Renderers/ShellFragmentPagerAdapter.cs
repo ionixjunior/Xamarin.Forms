@@ -16,7 +16,7 @@ namespace Xamarin.Forms.Platform.Android
 		bool _disposed;
 		ShellSection _shellSection;
 		IShellSectionController SectionController => (IShellSectionController)_shellSection;
-		
+
 #if __ANDROID_29__
 		public ShellFragmentPagerAdapter(ShellSection shellSection, FragmentManager fragmentManager) : base(fragmentManager, FragmentStatePagerAdapter.BehaviorResumeOnlyCurrentFragment)
 #else

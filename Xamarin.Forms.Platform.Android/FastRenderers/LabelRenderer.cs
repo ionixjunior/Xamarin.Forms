@@ -131,7 +131,7 @@ namespace Xamarin.Forms.Platform.Android.FastRenderers
 			var result = new SizeRequest(new Size(MeasuredWidth, MeasuredHeight), new Size());
 
 			//Set Hint back after sizing
-			if(setHint)
+			if (setHint)
 				Control.Hint = hint;
 
 			result.Minimum = new Size(Math.Min(Context.ToPixels(10), result.Request.Width), result.Request.Height);
@@ -420,10 +420,10 @@ namespace Xamarin.Forms.Platform.Android.FastRenderers
 						break;
 
 					default:
-							Text = Element.UpdateFormsText(Element.Text, Element.TextTransform);
+						Text = Element.UpdateFormsText(Element.Text, Element.TextTransform);
 						break;
 				}
-				
+
 				UpdateColor();
 				UpdateFont();
 

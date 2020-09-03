@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Globalization;
-using Xamarin.Forms.PlatformConfiguration.TizenSpecific;
-using Xamarin.Forms.Platform.Tizen.Native;
 using ElmSharp;
 using Tizen.Multimedia;
+using Xamarin.Forms.Platform.Tizen.Native;
+using Xamarin.Forms.PlatformConfiguration.TizenSpecific;
 using XForms = Xamarin.Forms.Forms;
 
 namespace Xamarin.Forms.Platform.Tizen
@@ -124,7 +124,7 @@ namespace Xamarin.Forms.Platform.Tizen
 					_player.MediaPrepared -= OnMediaPrepared;
 					_player.Dispose();
 				}
-				if (_controller != null )
+				if (_controller != null)
 				{
 					_controller.Parent = null;
 					Platform.SetRenderer(_controller, null);

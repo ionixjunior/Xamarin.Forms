@@ -72,7 +72,7 @@ namespace Xamarin.Forms.Platform.Android
 
 			var spanIndex = 0;
 
-			if(view.LayoutParameters is GridLayoutManager.LayoutParams gridLayoutParameters)
+			if (view.LayoutParameters is GridLayoutManager.LayoutParams gridLayoutParameters)
 			{
 				spanIndex = gridLayoutParameters.SpanIndex;
 			}

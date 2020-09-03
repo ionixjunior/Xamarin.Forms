@@ -19,7 +19,7 @@ namespace Xamarin.Forms.Controls.GalleryPages.ExpanderGalleries
 		public ICommand Command => _command ?? (_command = new Command(p =>
 		{
 			var sender = (Item)p;
-			if(!sender.IsExpanded)
+			if (!sender.IsExpanded)
 			{
 				return;
 			}
@@ -55,7 +55,8 @@ namespace Xamarin.Forms.Controls.GalleryPages.ExpanderGalleries
 			},
 		};
 
-		public sealed class Item: INotifyPropertyChanged {
+		public sealed class Item : INotifyPropertyChanged
+		{
 			public event PropertyChangedEventHandler PropertyChanged;
 			bool _isExpanded;
 			bool _isEnabled = true;
@@ -66,7 +67,7 @@ namespace Xamarin.Forms.Controls.GalleryPages.ExpanderGalleries
 				get => _isExpanded;
 				set
 				{
-					if(value == _isExpanded)
+					if (value == _isExpanded)
 						return;
 
 					_isExpanded = value;

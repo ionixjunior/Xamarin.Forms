@@ -535,10 +535,10 @@ namespace Xamarin.Forms.Platform.Android
 		void UpdateText()
 		{
 			var text = Element.UpdateFormsText(Element.Text, Element.TextTransform);
-			
+
 			if (EditText.Text == text)
 				return;
-			
+
 			EditText.Text = text;
 			if (EditText.IsFocused)
 			{

@@ -52,7 +52,7 @@ namespace Xamarin.Forms.Platform.Android.AppCompat
 			_onCreateCallback = callback;
 		}
 
-		protected virtual PageContainer CreatePageContainer (Context context, IVisualElementRenderer child, bool inFragment)
+		protected virtual PageContainer CreatePageContainer(Context context, IVisualElementRenderer child, bool inFragment)
 		{
 			return new PageContainer(context, child, inFragment);
 		}
@@ -148,7 +148,7 @@ namespace Xamarin.Forms.Platform.Android.AppCompat
 			var pageContainer = (masterDetailPage != null ? masterDetailPage.Detail : Application.Current.MainPage) as IPageContainer<Page>;
 			Page currentPage = pageContainer?.CurrentPage;
 
-			if(!(currentPage == null || currentPage == PageController))
+			if (!(currentPage == null || currentPage == PageController))
 				return;
 
 #if __ANDROID_29__
@@ -157,7 +157,7 @@ namespace Xamarin.Forms.Platform.Android.AppCompat
 			if (isAppearing && UserVisibleHint)
 #endif
 				PageController?.SendAppearing();
-			else if(!isAppearing)
+			else if (!isAppearing)
 				PageController?.SendDisappearing();
 		}
 	}

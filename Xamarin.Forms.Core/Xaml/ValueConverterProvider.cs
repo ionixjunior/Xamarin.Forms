@@ -4,7 +4,7 @@ using System.Reflection;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-[assembly:Dependency(typeof(ValueConverterProvider))]
+[assembly: Dependency(typeof(ValueConverterProvider))]
 namespace Xamarin.Forms.Xaml
 {
 	class ValueConverterProvider : IValueConverterProvider

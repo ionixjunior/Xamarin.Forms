@@ -65,7 +65,7 @@ namespace Xamarin.Forms.Platform.Android
 			if (disposing)
 			{
 				Controller.ScrollToRequested -= OnScrollToRequested;
-		
+
 				if (_headerRenderer != null)
 				{
 					Platform.ClearRenderer(_headerRenderer.View);
@@ -149,7 +149,7 @@ namespace Xamarin.Forms.Platform.Android
 				{
 					// Unhook the adapter from the ListView before disposing of it
 					Control.Adapter = null;
-					
+
 					Control.SetOnScrollListener(null);
 				}
 
@@ -180,7 +180,7 @@ namespace Xamarin.Forms.Platform.Android
 
 				((IListViewController)e.NewElement).ScrollToRequested += OnScrollToRequested;
 				Control?.SetOnScrollListener(new ListViewScrollDetector(this));
-				
+
 				nativeListView.DividerHeight = 0;
 				nativeListView.Focusable = false;
 				nativeListView.DescendantFocusability = DescendantFocusability.AfterDescendants;
@@ -415,9 +415,9 @@ namespace Xamarin.Forms.Platform.Android
 					_refresh.Refreshing = false;
 					_refresh.Post(() =>
 					{
-						if(_refresh.IsDisposed())
+						if (_refresh.IsDisposed())
 							return;
-						
+
 						_refresh.Refreshing = true;
 					});
 				}
@@ -491,7 +491,7 @@ namespace Xamarin.Forms.Platform.Android
 
 			Control.VerticalScrollBarEnabled = newVerticalScrollVisibility == ScrollBarVisibility.Always;
 		}
-		
+
 		internal class Container : ViewGroup
 		{
 			IVisualElementRenderer _child;

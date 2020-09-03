@@ -388,10 +388,10 @@ namespace Xamarin.Forms.Platform.Android
 			while (IsLayoutRequested)
 			{
 				await Task.Delay(TimeSpan.FromMilliseconds(1));
-				
+
 				if (_disposed)
-                	return;
-				
+					return;
+
 				cycle++;
 
 				if (cycle >= 10)
@@ -535,7 +535,7 @@ namespace Xamarin.Forms.Platform.Android
 					newHorizontalScrollVisiblility = _defaultHorizontalScrollVisibility;
 				}
 
-				_hScrollView.HorizontalScrollBarEnabled = newHorizontalScrollVisiblility == ScrollBarVisibility.Always;				
+				_hScrollView.HorizontalScrollBarEnabled = newHorizontalScrollVisiblility == ScrollBarVisibility.Always;
 			}
 		}
 

@@ -35,7 +35,7 @@ namespace Xamarin.Forms.Platform.Android
 					ViewGroup.LayoutParams.MatchParent);
 				textView.LayoutParameters = layoutParams;
 			}
-			
+
 			textView.Gravity = GravityFlags.Center;
 
 			return new SimpleViewHolder(textView, null);

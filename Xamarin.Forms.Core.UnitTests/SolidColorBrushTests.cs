@@ -68,5 +68,5 @@ namespace Xamarin.Forms.Core.UnitTests
 			Assert.IsNotNull(white.Color);
 			Assert.AreEqual("#FFFFFFFF", white.Color.ToHex());
 		}
-	}		
+	}
 }

@@ -70,7 +70,7 @@ namespace Xamarin.Forms
 		}
 
 		protected override SizeRequest OnMeasure(double widthConstraint, double heightConstraint)
-		{			
+		{
 			VerifyExperimental(nameof(Expander));
 			return base.OnMeasure(widthConstraint, heightConstraint);
 		}
@@ -78,7 +78,7 @@ namespace Xamarin.Forms
 		StackLayout ExpanderLayout { get; }
 
 		ContentView ContentHolder { get; set; }
-		
+
 		double ContentHeightRequest
 		{
 			get
@@ -365,6 +365,6 @@ namespace Xamarin.Forms
 		}
 
 		void OnIsEnabledChanged()
-			=> ExpanderLayout.Opacity = IsEnabled ? EnabledOpacity: DisabledOpacity;
+			=> ExpanderLayout.Opacity = IsEnabled ? EnabledOpacity : DisabledOpacity;
 	}
 }

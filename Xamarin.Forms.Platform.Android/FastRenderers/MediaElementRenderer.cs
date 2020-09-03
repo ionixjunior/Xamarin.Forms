@@ -1,9 +1,9 @@
-﻿using Android.Content;
+﻿using System;
+using System.ComponentModel;
+using Android.Content;
 using Android.Media;
 using Android.Views;
 using Android.Widget;
-using System;
-using System.ComponentModel;
 using Xamarin.Forms.Internals;
 using Xamarin.Forms.Platform.Android.FastRenderers;
 using AView = Android.Views.View;
@@ -24,7 +24,7 @@ namespace Xamarin.Forms.Platform.Android
 		MediaController _controller;
 		MediaPlayer _mediaPlayer;
 		FormsVideoView _view;
-		
+
 		public MediaElementRenderer(Context context) : base(context)
 		{
 			Xamarin.Forms.MediaElement.VerifyMediaElementFlagEnabled(nameof(MediaElementRenderer));
@@ -233,7 +233,7 @@ namespace Xamarin.Forms.Platform.Android
 		{
 			if (e.OldElement != null)
 			{
-				
+
 			}
 
 			if (e.NewElement != null)
@@ -267,7 +267,7 @@ namespace Xamarin.Forms.Platform.Android
 		//todo: make virtual when unsealed
 		void OnElementPropertyChanged(object sender, PropertyChangedEventArgs e)
 		{
-			switch(e.PropertyName)
+			switch (e.PropertyName)
 			{
 				case nameof(MediaElement.Aspect):
 					UpdateLayoutParameters();
@@ -500,7 +500,7 @@ namespace Xamarin.Forms.Platform.Android
 			Controller.OnMediaFailed();
 			return false;
 		}
-		
+
 		bool MediaPlayer.IOnInfoListener.OnInfo(MediaPlayer mp, MediaInfo what, int extra)
 		{
 			if (_view == null)
@@ -525,7 +525,7 @@ namespace Xamarin.Forms.Platform.Android
 			}
 
 			_mediaPlayer = mp;
-			
+
 			return true;
 		}
 

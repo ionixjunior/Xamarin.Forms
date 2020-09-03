@@ -32,7 +32,7 @@ namespace Xamarin.Forms.Platform.Android
 			{
 				RequestLayout();
 			}
-			else if(sender is VisualElement ve)
+			else if (sender is VisualElement ve)
 			{
 				ve.MeasureInvalidated -= ElementMeasureInvalidated;
 			}

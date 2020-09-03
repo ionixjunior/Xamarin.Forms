@@ -120,7 +120,7 @@ namespace Xamarin.Forms.Material.Android
 				return;
 			}
 
-			if(Element == null || Element.CornerRadius <= 0)
+			if (Element == null || Element.CornerRadius <= 0)
 			{
 				base.Draw(canvas);
 				return;

@@ -56,7 +56,7 @@ namespace Xamarin.Forms
 			request = FormatUri(request, shell);
 			return ConvertToStandardFormat(shell?.RouteScheme, shell?.RouteHost, shell?.Route, request);
 		}
-		
+
 		public static Uri ConvertToStandardFormat(string routeScheme, string routeHost, string route, Uri request)
 		{
 			string pathAndQuery = null;
@@ -221,7 +221,7 @@ namespace Xamarin.Forms
 						// So right now we will just throw an exception so that once this is implemented
 						// GotoAsync doesn't start acting inconsistently and all of a sudden starts creating routes
 
-						int shellElementsMatched = 
+						int shellElementsMatched =
 							pureGlobalRoutesMatch[0].SegmentsMatched.Count -
 							pureGlobalRoutesMatch[0].GlobalRouteMatches.Count;
 

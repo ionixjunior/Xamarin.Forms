@@ -10,7 +10,7 @@ namespace Xamarin.Forms.Platform.Tizen.Native
 {
 	public class MediaPlayerImpl : IPlatformMediaPlayer
 	{
-		bool _disposed  = false;
+		bool _disposed = false;
 		bool _cancelToStart;
 		DisplayAspectMode _aspectMode = DisplayAspectMode.AspectFit;
 		Player _player;

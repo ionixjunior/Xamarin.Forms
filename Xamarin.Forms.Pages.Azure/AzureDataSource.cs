@@ -23,7 +23,7 @@ namespace Xamarin.Forms.Pages.Azure
 		{
 			ParseJsonToken(rootToken);
 		}
-		
+
 		public AzureSource Source
 		{
 			get

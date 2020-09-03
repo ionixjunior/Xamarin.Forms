@@ -165,7 +165,7 @@ namespace Xamarin.Forms.Material.Android
 
 			this.ApplySeekBarColors(progressColor, backgroundColor, thumbColor);
 		}
-		
+
 		double Value
 		{
 			get { return _min + (_max - _min) * (Control.Progress / MaximumValue); }

@@ -1,7 +1,7 @@
 ﻿using System;
-using ElmSharp;
 using System.Collections.Generic;
 using System.Collections.Specialized;
+using ElmSharp;
 
 namespace Xamarin.Forms.Platform.Tizen.Native
 {

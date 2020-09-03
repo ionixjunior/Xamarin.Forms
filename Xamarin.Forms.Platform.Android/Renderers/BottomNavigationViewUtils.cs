@@ -138,7 +138,7 @@ namespace Xamarin.Forms.Platform.Android
 
 				using (var innerLayout = new LinearLayout(context))
 				{
-					if(Forms.IsLollipopOrNewer)
+					if (Forms.IsLollipopOrNewer)
 					{
 						innerLayout.ClipToOutline = true;
 					}
@@ -169,7 +169,7 @@ namespace Xamarin.Forms.Platform.Android
 					};
 					image.LayoutParameters = lp;
 					lp.Dispose();
-					
+
 					if (Forms.IsLollipopOrNewer)
 					{
 						image.ImageTintList = ColorStateList.ValueOf(Color.Black.MultiplyAlpha(0.6).ToAndroid());

@@ -210,7 +210,7 @@ namespace Xamarin.Forms.Platform.Android.AppCompat
 					trans.CommitAllowingStateLossEx();
 					fm.ExecutePendingTransactionsEx();
 				}
-				
+
 				_toolbar.RemoveView(_titleView);
 				_titleView?.Dispose();
 				_titleView = null;
@@ -256,7 +256,7 @@ namespace Xamarin.Forms.Platform.Android.AppCompat
 					_toolbar.Menu.Clear();
 
 					RemoveView(_toolbar);
-				
+
 					_toolbar.Dispose();
 					_toolbar = null;
 				}
@@ -412,7 +412,7 @@ namespace Xamarin.Forms.Platform.Android.AppCompat
 			AToolbar bar = _toolbar;
 			// make sure bar stays on top of everything
 			bar.BringToFront();
-			
+
 			int barHeight = ActionBarHeight();
 
 			if (Element.IsSet(BarHeightProperty))

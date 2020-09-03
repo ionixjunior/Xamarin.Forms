@@ -6,7 +6,7 @@ namespace Xamarin.Forms.Pages.Azure
 {
 	public abstract class AzureSource : Element
 	{
-		public static readonly BindableProperty UriProperty = 
+		public static readonly BindableProperty UriProperty =
 			BindableProperty.Create(nameof(Uri), typeof(Uri), typeof(AzureSource), null);
 
 		[TypeConverter(typeof(UriTypeConverter))]

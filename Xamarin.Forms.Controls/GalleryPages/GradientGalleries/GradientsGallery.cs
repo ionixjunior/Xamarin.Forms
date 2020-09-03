@@ -82,7 +82,7 @@
 				Content = layout
 			};
 		}
-		
+
 		void ButtonClicked(object sender, System.EventArgs e)
 		{
 			var button = sender as Button;

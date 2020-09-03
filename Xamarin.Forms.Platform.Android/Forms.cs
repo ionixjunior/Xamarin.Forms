@@ -98,7 +98,7 @@ namespace Xamarin.Forms
 				return s_is29OrNewer.Value;
 			}
 		}
-		
+
 		internal static bool IsJellyBeanMr1OrNewer
 		{
 			get
@@ -431,7 +431,7 @@ namespace Xamarin.Forms
 			}
 
 			s_flags = (string[])flags.Clone();
-			if (s_flags.Contains ("Profile"))
+			if (s_flags.Contains("Profile"))
 				Profile.Enable();
 			FlagsSet = true;
 		}
@@ -922,18 +922,18 @@ namespace Xamarin.Forms
 			}
 
 			public OSAppTheme RequestedTheme
-            {
-                get
-                {
-                    var nightMode = _context.Resources.Configuration.UiMode & UiMode.NightMask;
-                    switch (nightMode)
-                    {
-                        case UiMode.NightYes:
-                            return OSAppTheme.Dark;
-                        case UiMode.NightNo:
-                            return OSAppTheme.Light;
-                        default:
-                            return OSAppTheme.Unspecified;
+			{
+				get
+				{
+					var nightMode = _context.Resources.Configuration.UiMode & UiMode.NightMask;
+					switch (nightMode)
+					{
+						case UiMode.NightYes:
+							return OSAppTheme.Dark;
+						case UiMode.NightNo:
+							return OSAppTheme.Light;
+						default:
+							return OSAppTheme.Unspecified;
 					};
 				}
 			}

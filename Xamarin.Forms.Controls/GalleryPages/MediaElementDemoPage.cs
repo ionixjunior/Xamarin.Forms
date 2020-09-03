@@ -13,8 +13,8 @@ namespace Xamarin.Forms.Controls
 		public MediaElementDemoPage()
 		{
 			element = new MediaElement();
-			element.HorizontalOptions = new LayoutOptions(LayoutAlignment.Fill,true);
-			element.VerticalOptions = new LayoutOptions(LayoutAlignment.Fill,true);
+			element.HorizontalOptions = new LayoutOptions(LayoutAlignment.Fill, true);
+			element.VerticalOptions = new LayoutOptions(LayoutAlignment.Fill, true);
 			element.MinimumWidthRequest = 320;
 			element.MinimumHeightRequest = 240;
 			element.AutoPlay = false;
@@ -72,7 +72,7 @@ namespace Xamarin.Forms.Controls
 			var showControlsSwitch = new Switch();
 			showControlsSwitch.SetBinding(Switch.IsToggledProperty, new Binding("ShowsPlaybackControls", BindingMode.TwoWay, source: element));
 
-			
+
 			var mediaControlStack = new StackLayout();
 			mediaControlStack.Orientation = StackOrientation.Horizontal;
 			mediaControlStack.HorizontalOptions = new LayoutOptions(LayoutAlignment.Center, false);
@@ -116,7 +116,7 @@ namespace Xamarin.Forms.Controls
 			stack.Children.Add(new Label() { Text = "Volume:" });
 			stack.Children.Add(volumeSlider);
 			element.Volume = 0.1;
-			Content = stack;	
+			Content = stack;
 		}
 
 		private void VolumeSlider_ValueChanged(object sender, ValueChangedEventArgs e)
@@ -158,17 +158,18 @@ namespace Xamarin.Forms.Controls
 		{
 			base.OnAppearing();
 
-			if(Device.RuntimePlatform == Device.WPF)
+			if (Device.RuntimePlatform == Device.WPF)
 			{
 				// workaround for lack of https support on WPF
 				element.Source = new Uri("http://sec.ch9.ms/ch9/5d93/a1eab4bf-3288-4faf-81c4-294402a85d93/XamarinShow_mid.mp4");
 			}
 			else
 			{
-				element.Source = new Uri("https://sec.ch9.ms/ch9/5d93/a1eab4bf-3288-4faf-81c4-294402a85d93/XamarinShow_mid.mp4");			
+				element.Source = new Uri("https://sec.ch9.ms/ch9/5d93/a1eab4bf-3288-4faf-81c4-294402a85d93/XamarinShow_mid.mp4");
 			}
 
-			Device.StartTimer(TimeSpan.FromMilliseconds(100), ()=>{
+			Device.StartTimer(TimeSpan.FromMilliseconds(100), () =>
+			{
 				Device.BeginInvokeOnMainThread(() =>
 				{
 					positionLabel.Text = element.Position.ToString("mm\\:ss\\.ff");

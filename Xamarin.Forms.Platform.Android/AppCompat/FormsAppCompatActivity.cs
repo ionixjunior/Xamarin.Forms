@@ -212,7 +212,7 @@ namespace Xamarin.Forms.Platform.Android
 		}
 
 		void OnCreate(
-			Bundle savedInstanceState, 
+			Bundle savedInstanceState,
 			ActivationFlags flags)
 		{
 			Profile.FrameBegin();
@@ -282,7 +282,7 @@ namespace Xamarin.Forms.Platform.Android
 					throw new InvalidOperationException("ToolbarResource must be set to a androidx.appcompat.widget.Toolbar");
 #endif
 			}
-			else 
+			else
 			{
 				bar = new AToolbar(this);
 			}
@@ -355,9 +355,9 @@ namespace Xamarin.Forms.Platform.Android
 
 			if (_powerSaveReceiverRegistered && Forms.IsLollipopOrNewer)
 			{
-					// Don't listen for power save mode changes while we're paused
-					UnregisterReceiver(_powerSaveModeBroadcastReceiver);
-					_powerSaveReceiverRegistered = false;
+				// Don't listen for power save mode changes while we're paused
+				UnregisterReceiver(_powerSaveModeBroadcastReceiver);
+				_powerSaveReceiverRegistered = false;
 			}
 
 			// Stop animations or other ongoing actions that could consume CPU
@@ -488,7 +488,7 @@ namespace Xamarin.Forms.Platform.Android
 				SettingMainPage();
 			}
 		}
-		
+
 		void CheckForAppLink(Intent intent)
 		{
 			string action = intent.Action;
@@ -526,7 +526,7 @@ namespace Xamarin.Forms.Platform.Android
 
 			if (_previousState == AndroidApplicationLifecycleState.OnCreate && _currentState == AndroidApplicationLifecycleState.OnStart)
 				_application.SendStart();
-			else if (_previousState == AndroidApplicationLifecycleState.OnRestart && _currentState == AndroidApplicationLifecycleState.OnStart)	
+			else if (_previousState == AndroidApplicationLifecycleState.OnRestart && _currentState == AndroidApplicationLifecycleState.OnStart)
 				_application.SendResume();
 			else if (_previousState == AndroidApplicationLifecycleState.OnPause && _currentState == AndroidApplicationLifecycleState.OnStop)
 				_application.SendSleep();
@@ -542,7 +542,7 @@ namespace Xamarin.Forms.Platform.Android
 		{
 			InternalSetPage(_application.MainPage);
 		}
-				
+
 		void SettingMainPage()
 		{
 			Platform.SettingNewPage();
@@ -576,7 +576,7 @@ namespace Xamarin.Forms.Platform.Android
 		{
 		}
 
-#region Statics
+		#region Statics
 
 		public static event BackButtonPressedEventHandler BackPressed;
 
@@ -584,6 +584,6 @@ namespace Xamarin.Forms.Platform.Android
 
 		public static int ToolbarResource { get; set; }
 
-#endregion
+		#endregion
 	}
 }
